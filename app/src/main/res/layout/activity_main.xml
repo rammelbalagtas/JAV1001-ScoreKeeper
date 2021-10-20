@@ -4,15 +4,178 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="auto"
     tools:context=".MainActivity">
 
+    <!-- Philippines team header text -->
     <TextView
+        android:id="@+id/text_ph"
+        style="@style/CountryTextView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_ph"
+        app:layout_constraintEnd_toStartOf="@+id/separator1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Separator for formatting purposes -->
+    <TextView
+        android:id="@+id/separator1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_ph"
+        app:layout_constraintEnd_toStartOf="@+id/text_canada"
+        app:layout_constraintStart_toEndOf="@+id/text_ph" />
+
+    <!-- Canada team header text -->
+    <TextView
+        android:id="@+id/text_canada"
+        style="@style/CountryTextView"
+        android:layout_marginEnd="8dp"
+        android:text="@string/text_canada"
+        app:layout_constraintBaseline_toBaselineOf="@+id/separator1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/separator1" />
+
+    <!-- Philippines Team Logo -->
+    <ImageView
+        android:id="@+id/logo_ph"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo_ph_contentdescription"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/text_versus"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/text_ph"
+        app:layout_constraintTop_toBottomOf="@+id/text_ph"
+        app:srcCompat="@drawable/ph_team_logo" />
+
+    <TextView
+        android:id="@+id/text_versus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_vs"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/logo_canada"
+        app:layout_constraintStart_toEndOf="@+id/logo_ph"
+        app:layout_constraintTop_toTopOf="@+id/logo_ph" />
+
+    <!-- Canada Team Logo -->
+    <ImageView
+        android:id="@+id/logo_canada"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/logo_canada_content_description"
+        app:layout_constraintEnd_toEndOf="@+id/text_canada"
+        app:layout_constraintStart_toEndOf="@+id/text_versus"
+        app:layout_constraintTop_toTopOf="@+id/logo_ph"
+        app:srcCompat="@drawable/canada_team_logo" />
+
+    <!-- Philippines team score -->
+    <TextView
+        android:id="@+id/text_score_ph"
+        style="@style/ScoreText"
+        android:layout_marginTop="40dp"
+        android:text="@string/default_score"
+        app:layout_constraintEnd_toEndOf="@+id/logo_ph"
+        app:layout_constraintStart_toStartOf="@+id/logo_ph"
+        app:layout_constraintTop_toBottomOf="@+id/logo_ph" />
+
+    <!-- Canada team score -->
+    <TextView
+        android:id="@+id/text_score_canada"
+        style="@style/ScoreText"
+        android:text="@string/default_score"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_score_ph"
+        app:layout_constraintEnd_toEndOf="@+id/logo_canada"
+        app:layout_constraintStart_toStartOf="@+id/logo_canada" />
+
+    <!-- Increment score button -->
+    <Button
+        android:id="@+id/button_plus"
+        style="@style/AddMinusButton"
+        android:layout_marginBottom="8dp"
+        android:text="@string/plus_sign"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_team"
+        app:layout_constraintEnd_toEndOf="@+id/text_versus"
+        app:layout_constraintStart_toStartOf="@+id/text_versus" />
+
+    <!-- Toggle between two teams -->
+    <ToggleButton
+        android:id="@+id/toggle_team"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="#1E88E5"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textOff="@string/toggle_text_canada"
+        android:textOn="@string/toggle_text_ph"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text_score_ph"
+        app:layout_constraintEnd_toEndOf="@+id/button_plus"
+        app:layout_constraintStart_toStartOf="@+id/button_plus"
+        app:layout_constraintTop_toTopOf="@+id/text_score_ph"
+        tools:ignore="TextContrastCheck" />
+
+    <!-- Decrement score button -->
+    <Button
+        android:id="@+id/button_minus"
+        style="@style/AddMinusButton"
+        android:layout_marginTop="8dp"
+        android:text="@string/minus_sign"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_team"
+        app:layout_constraintStart_toStartOf="@+id/toggle_team"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_team"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <!-- Radio group for different score options -->
+    <RadioGroup
+        android:id="@+id/radiogroup_score_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_minus">
+
+        <RadioButton
+            android:id="@+id/rb_score_1"
+            style="@style/ScoreRadioButton"
+            android:checked="true"
+            android:text="@string/text_1_pt" />
+
+        <RadioButton
+            android:id="@+id/rb_score_2"
+            style="@style/ScoreRadioButton"
+            android:text="@string/text_2_pt" />
+
+        <RadioButton
+            android:id="@+id/rb_score_3"
+            style="@style/ScoreRadioButton"
+            android:text="@string/text_3_pt" />
+
+    </RadioGroup>
+
+    <!-- Reset game button -->
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#1E88E5"
+        android:text="@string/reset_score"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/radiogroup_score_options"
+        app:layout_constraintStart_toStartOf="@+id/radiogroup_score_options"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup_score_options"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
