@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Rammel_Score</string>
-    <!-- Additional string resources -->
     <string name="logo_ph_contentdescription">This is a logo of Philippines basketball team</string>
     <string name="logo_canada_content_description">This is a logo of Canada basketball team</string>
     <string name="toggle_text_canada">Team CA</string>
