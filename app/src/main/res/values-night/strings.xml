@@ -14,4 +14,5 @@
     <string name="text_2_pt">2 pts</string>
     <string name="text_3_pt">3 pts</string>
     <string name="reset_score">Reset Score</string>
+    <string name="negative_score">A negative score is not allowed.</string>
 </resources>
