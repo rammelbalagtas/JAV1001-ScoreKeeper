@@ -11,6 +11,14 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <!-- Dynamic values for light and dark mode -->
+
+        <!-- Text color for Text Views-->
+        <item name="myTextViewColor">#B3E5FC</item>
+        <!-- Button text color -->
+        <item name="myButtonTextColor">@color/white</item>
+        <!-- Button background color -->
+        <item name="myButtonBackgroundColor">#4DB6AC</item>
     </style>
 </resources>

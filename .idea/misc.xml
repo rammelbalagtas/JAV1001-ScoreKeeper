@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.22864583333333333" />
         <entry key="app/src/main/res/drawable-anydpi/ball_icon_checked.xml" value="0.24256410256410257" />
         <entry key="app/src/main/res/drawable-anydpi/ball_icon_uncheck.xml" value="0.24722222222222223" />
         <entry key="app/src/main/res/drawable-anydpi/ball_icon_unchecked.xml" value="0.24722222222222223" />
@@ -11,7 +12,9 @@
         <entry key="app/src/main/res/drawable-v24/radio_button_team.xml" value="0.24722222222222223" />
         <entry key="app/src/main/res/drawable-xhdpi/radio_button_team.xml" value="0.24722222222222223" />
         <entry key="app/src/main/res/drawable/radio_button_team.xml" value="0.2740740740740741" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout-night/activity_main.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/layout/activitiy_backup_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main_backup.xml" value="0.5" />
       </map>
     </option>

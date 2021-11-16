@@ -11,6 +11,64 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <!-- Dynamic values for light and dark mode -->
+        <!-- Text color for Text Views-->
+        <item name="myTextViewColor">#615B5B</item>
+        <!-- Button text color -->
+        <item name="myButtonTextColor">@color/white</item>
+        <!-- Button background color -->
+        <item name="myButtonBackgroundColor">#1E88E5</item>
     </style>
+
+    <!-- style for radio button scoring options -->
+    <style name="ScoreRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:drawableTop">@drawable/radio_button_team</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:textColor">?attr/myTextViewColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <!-- style for scores -->
+    <style name="ScoreText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">?attr/myTextViewColor</item>
+    </style>
+
+    <!-- style for header country texts -->
+    <style name="CountryTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">?attr/myTextViewColor</item>
+    </style>
+
+    <style name="AddMinusButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/myButtonTextColor</item>
+        <item name="backgroundTint">?attr/myButtonBackgroundColor</item>
+    </style>
+
 </resources>
