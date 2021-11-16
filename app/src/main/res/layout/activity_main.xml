@@ -10,7 +10,9 @@
     <!-- Philippines team header text -->
     <TextView
         android:id="@+id/text_ph"
-        style="@style/CountryTextView"
+        style="@style/myTextViewStyle.CountryText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/text_ph"
@@ -30,7 +32,9 @@
     <!-- Canada team header text -->
     <TextView
         android:id="@+id/text_canada"
-        style="@style/CountryTextView"
+        style="@style/myTextViewStyle.CountryText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="@string/text_canada"
         app:layout_constraintBaseline_toBaselineOf="@+id/separator1"
@@ -54,6 +58,7 @@
 
     <TextView
         android:id="@+id/text_versus"
+        style="@style/myTextViewStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/text_vs"
@@ -79,8 +84,12 @@
     <!-- Philippines team score -->
     <TextView
         android:id="@+id/text_score_ph"
-        style="@style/ScoreText"
+        style="@style/myTextViewStyle.ScoreText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:text="@string/default_score"
         app:layout_constraintEnd_toEndOf="@+id/logo_ph"
         app:layout_constraintStart_toStartOf="@+id/logo_ph"
@@ -89,7 +98,11 @@
     <!-- Canada team score -->
     <TextView
         android:id="@+id/text_score_canada"
-        style="@style/ScoreText"
+        style="@style/myTextViewStyle.ScoreText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:text="@string/default_score"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_score_ph"
         app:layout_constraintEnd_toEndOf="@+id/logo_canada"
@@ -98,8 +111,11 @@
     <!-- Increment score button -->
     <Button
         android:id="@+id/button_plus"
-        style="@style/AddMinusButton"
+        style="@style/myButtonStyle.AddMinus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="8dp"
+        android:padding="0dp"
         android:text="@string/plus_sign"
         app:layout_constraintBottom_toTopOf="@+id/toggle_team"
         app:layout_constraintEnd_toEndOf="@+id/text_versus"
@@ -108,15 +124,12 @@
     <!-- Toggle between two teams -->
     <ToggleButton
         android:id="@+id/toggle_team"
+        style="@style/myButtonStyle.toggleTeamButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/myButtonBackgroundColor"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="?attr/myButtonTextColor"
         android:textOff="@string/toggle_text_canada"
         android:textOn="@string/toggle_text_ph"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/text_score_ph"
         app:layout_constraintEnd_toEndOf="@+id/button_plus"
         app:layout_constraintStart_toStartOf="@+id/button_plus"
@@ -126,8 +139,11 @@
     <!-- Decrement score button -->
     <Button
         android:id="@+id/button_minus"
-        style="@style/AddMinusButton"
+        style="@style/myButtonStyle.AddMinus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
+        android:padding="0dp"
         android:text="@string/minus_sign"
         app:layout_constraintEnd_toEndOf="@+id/toggle_team"
         app:layout_constraintStart_toStartOf="@+id/toggle_team"
@@ -166,15 +182,11 @@
     <!-- Reset game button -->
     <Button
         android:id="@+id/button_reset"
+        style="@style/myButtonStyle.Reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="?attr/myButtonBackgroundColor"
         android:text="@string/reset_score"
-        android:textAllCaps="false"
-        android:textColor="?attr/myButtonTextColor"
-        android:textSize="14sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/radiogroup_score_options"
         app:layout_constraintStart_toStartOf="@+id/radiogroup_score_options"
         app:layout_constraintTop_toBottomOf="@+id/radiogroup_score_options"

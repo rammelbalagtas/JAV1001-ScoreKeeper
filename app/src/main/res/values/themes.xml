@@ -21,6 +21,44 @@
         <item name="myButtonBackgroundColor">#1E88E5</item>
     </style>
 
+    <!-- Generic style for Text Views -->
+    <style name="myTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">?attr/myTextViewColor</item>
+    </style>
+    <!-- Specific style for scores -->
+    <style name="myTextViewStyle.ScoreText">
+        <item name="android:textSize">60sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <!-- Specific style for header country texts -->
+    <style name="myTextViewStyle.CountryText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <!-- style for buttons -->
+    <style name="myButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?attr/myButtonTextColor</item>
+        <item name="backgroundTint">?attr/myButtonBackgroundColor</item>
+    </style>
+    <!-- specific style for Add/Minus button -->
+    <style name="myButtonStyle.AddMinus">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- specific style for Reset button -->
+    <style name="myButtonStyle.Reset">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- style for toggle button -->
+    <style name="myButtonStyle.toggleTeamButton">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="background">?attr/myButtonBackgroundColor</item>
+    </style>
+
     <!-- style for radio button scoring options -->
     <style name="ScoreRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
@@ -34,41 +72,6 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold|italic</item>
         <item name="android:textAlignment">center</item>
-    </style>
-
-    <!-- style for scores -->
-    <style name="ScoreText" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:textSize">60sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textColor">?attr/myTextViewColor</item>
-    </style>
-
-    <!-- style for header country texts -->
-    <style name="CountryTextView" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textAlignment">center</item>
-        <item name="android:textColor">?attr/myTextViewColor</item>
-    </style>
-
-    <style name="AddMinusButton" parent="Widget.MaterialComponents.Button">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">48dp</item>
-        <item name="android:paddingTop">0dp</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingBottom">0dp</item>
-        <item name="android:textSize">25sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">?attr/myButtonTextColor</item>
-        <item name="backgroundTint">?attr/myButtonBackgroundColor</item>
     </style>
 
 </resources>
